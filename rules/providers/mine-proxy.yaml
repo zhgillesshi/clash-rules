@@ -1,0 +1,8 @@
+# Personal proxy exceptions. Keep one Mihomo classical rule per entry.
+payload:
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,github.com
+  - DOMAIN-SUFFIX,githubusercontent.com

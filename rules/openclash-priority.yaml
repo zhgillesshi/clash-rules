@@ -1,0 +1,11 @@
+# Template only. Generate the deployable version with `clash-rules render`.
+rule-providers:
+  mine-proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    path: ./mine-proxy.yaml
+    url: https://raw.githubusercontent.com/<owner>/<repo>/main/packages/clash-rules/rules/providers/mine-proxy.yaml
+    interval: 86400
+rules:
+  - RULE-SET,mine-proxy,auto

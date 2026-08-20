@@ -1,0 +1,18 @@
+[project]
+name = "clash-rules"
+version = "0.1.0"
+description = "Version-controlled Mihomo rule providers for OpenClash"
+requires-python = ">=3.11"
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+clash-rules = "clash_rules.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clash_rules"]
