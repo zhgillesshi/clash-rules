@@ -12,12 +12,21 @@
 # 校验本地规则集
 uv run clash-rules validate
 
+# 发布这个 package 到独立规则仓库
+./scripts/publish-clash-rules
+
 # 生成 OpenClash 覆写片段（将 URL 换成该仓库发布后的 raw 地址）
 uv run clash-rules render \
   --provider-url https://raw.githubusercontent.com/<owner>/<repo>/main/packages/clash-rules/rules/providers/mine-proxy.yaml
 ```
 
 将生成内容粘贴到「Custom Clash Rules (Priority)」，勾选 `Use Custom Rules`，再依次点击 `Commit Settings` 和 `Apply Settings`。
+
+发布后，路由器使用以下长期 URL：
+
+```text
+https://raw.githubusercontent.com/zhgillesshi/clash-rules/main/rules/providers/mine-proxy.yaml
+```
 
 ## 规则约定
 
