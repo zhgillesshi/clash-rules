@@ -1,0 +1,24 @@
+# Steam and PICO PARK 2 (Photon) traffic routed through the Steam policy group.
+payload:
+  - DOMAIN-SUFFIX,steampowered.com
+  - DOMAIN-SUFFIX,steamcommunity.com
+  - DOMAIN-SUFFIX,steamstatic.com
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,steamusercontent.com
+  - DOMAIN-SUFFIX,steamserver.net
+  - DOMAIN-SUFFIX,steamgames.com
+  - DOMAIN-SUFFIX,steam-chat.com
+  - DOMAIN-SUFFIX,valvesoftware.com
+  - DOMAIN-SUFFIX,valve.net
+  - DOMAIN-SUFFIX,akamaihd.net
+  - IP-ASN,32590,no-resolve
+  - AND,((NETWORK,UDP),(DST-PORT,3478))
+  - AND,((NETWORK,UDP),(DST-PORT,4379-4380))
+  - AND,((NETWORK,UDP),(DST-PORT,27000-27250))
+  - AND,((NETWORK,TCP),(DST-PORT,27015-27050))
+  - DOMAIN-SUFFIX,photonengine.com
+  - DOMAIN-SUFFIX,photonengine.io
+  - DOMAIN,ns.photonengine.cn
+  - AND,((NETWORK,UDP),(DST-PORT,5055-5058))
+  - AND,((NETWORK,TCP),(DST-PORT,4530-4533))
+  - AND,((NETWORK,TCP),(DST-PORT,9090-9093))

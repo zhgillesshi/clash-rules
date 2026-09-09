@@ -18,9 +18,8 @@
 - `ChatGPT`：日本节点可选组，并使用 `oc_openai` 远程规则集；
 - `Reddit`：可手动选择节点，优先匹配 `reddit.com`、`redditstatic.com` 和
   `redditmedia.com`。
-- `Steam`：默认使用 `auto`，也可切换为直连或任意节点；匹配 Steam 商店、
-  社区、聊天、内容下载、Valve 网络、Steamworks 常用 TCP/UDP 端口，以及
-  PICO PARK 2 跨平台联机使用的 Photon 域名和端口。
+- `Steam`：默认使用 `auto`，也可切换为直连或任意节点；通过 `steam-pico`
+  远程规则集匹配 Steam、Valve 及 PICO PARK 2 使用的 Photon 域名和端口。
 
 必须使用脚本中的 `ruby_arr_insert_hash`、`ruby_merge_hash` 和
 `ruby_arr_insert` helper 写入最终配置；仅在 MetaCubeXD 或 OpenClash 的自定义
